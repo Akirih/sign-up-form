@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <header>
+            <img src="cat-logo.png" alt="cat face stylized" class="logo">
+            <p>Cat Stuff</p>  
+        </header>
+    </div>
+    <div id="main-container">
+        <div id="top-container-box">
+            <p>''As anyone who has ever been around a cat for any length of time well knows, cats have enormous patience with the limitations of the humankind.''</p>
+            <p>Join the cat lover army today!</p>
+        </div>
+        <div id="form-container">
+            <p>Be a part of the <span>#bestpet</span> community!</p>
+            <form>
+                <div class="group">                    
+                    <input type="text" id="form-name-first" minlength="3" required class="form">
+                    <label for="form-name-first">First Name:</label>
+                    <span>Must be longer than 3 characters</span>
+                </div>
+                <div class="group">                    
+                    <input type="text" id="form-name-last" minlength="3" required class="form">
+                    <label for="form-name-last">Last Name:</label>
+                    <span>Must be longer than 3 characters</span>
+                </div>
+                <div class="group">                    
+                    <input type="email" id="form-email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" required class="form">
+                    <label for="form-email">E-mail:</label>
+                    <span>E-mail format incorrect or incomplete</span>
+                </div>
+                <div class="group">
+                    <input type="tel" id="form-phone-number" pattern="[0-9]{9}" required class="form" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    <label for="form-phone-number">Phone Number:</label>
+                    <span>Must be 9 digits long</span>
+                </div>
+                <div class="group">
+                    <input type="password" id="form-pw" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required class="form">
+                    <label for="form-pw">Password:</label>
+                    <span>Must have at least 8 characters with at least one letter, number and special character </span>
+                </div>
+                <div class="group">
+                    <input type="password" id="form-pw-confirm" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required class="form not-match">
+                    <label for="form-pw-confirm">Confirm Password:</label>
+                    <span>Must match the password field</span>
+                </div>
+            </form>
+        </div>
+        <div id="bot-container-box">
+            <input type="button" value="Join Now" id="button-submit">
+                <p>Already a member? <a href="">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>
